@@ -130,6 +130,9 @@ psd
 thumb
 sketch
 
+/.pnp
+.pnp.js
+
 ### ReactNative ###
 # React Native Stack Base
 
