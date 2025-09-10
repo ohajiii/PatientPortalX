@@ -44,6 +44,15 @@
 # *.iml
 # *.ipr
 
+# Docker
+# Ignore local volumes, logs, and override files
+docker-data/
+docker-compose.override.yml
+*.log
+
+# If you’re using .env for DB passwords
+.env
+
 # CMake
 cmake-build-*/
 
