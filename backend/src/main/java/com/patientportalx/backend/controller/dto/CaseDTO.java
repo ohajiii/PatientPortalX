@@ -1,6 +1,6 @@
-package com.patientportalx.backend.dto;
+package com.patientportalx.backend.controller.dto;
 
-import com.patientportalx.backend.entity.enums.CaseStatus;
+import com.patientportalx.backend.domain.enums.CaseStatus;
 import lombok.*;
 
 import java.time.LocalDateTime;

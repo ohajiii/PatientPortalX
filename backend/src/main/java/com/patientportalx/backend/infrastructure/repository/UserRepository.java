@@ -1,7 +1,7 @@
-package com.patientportalx.backend.repository;
+package com.patientportalx.backend.infrastructure.repository;
 
-import com.patientportalx.backend.entity.User;
-import com.patientportalx.backend.entity.enums.Role;
+import com.patientportalx.backend.infrastructure.entity.User;
+import com.patientportalx.backend.domain.enums.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

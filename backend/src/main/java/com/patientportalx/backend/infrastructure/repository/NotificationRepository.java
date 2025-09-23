@@ -1,7 +1,7 @@
-package com.patientportalx.backend.repository;
+package com.patientportalx.backend.infrastructure.repository;
 
-import com.patientportalx.backend.entity.Notification;
-import com.patientportalx.backend.entity.User;
+import com.patientportalx.backend.infrastructure.entity.Notification;
+import com.patientportalx.backend.infrastructure.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

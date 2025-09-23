@@ -1,4 +1,4 @@
-package com.patientportalx.backend.entity.enums;
+package com.patientportalx.backend.domain.enums;
 
 public enum CaseStatus {
     NEW,

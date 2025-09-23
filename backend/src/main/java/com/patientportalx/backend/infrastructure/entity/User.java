@@ -1,6 +1,6 @@
-package com.patientportalx.backend.entity;
+package com.patientportalx.backend.infrastructure.entity;
 
-import com.patientportalx.backend.entity.enums.Role;
+import com.patientportalx.backend.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 

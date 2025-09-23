@@ -1,4 +1,4 @@
-package com.patientportalx.backend.dto;
+package com.patientportalx.backend.controller.dto;
 
 import lombok.*;
 

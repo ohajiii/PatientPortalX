@@ -1,4 +1,4 @@
-package com.patientportalx.backend.entity;
+package com.patientportalx.backend.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
