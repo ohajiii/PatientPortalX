@@ -1,11 +1,12 @@
 package com.patientportalx.backend.domain.model;
 
 import com.patientportalx.backend.domain.enums.Role;
-import lombok.Getter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
+@Builder
 public class User {
     private final Long id;
     private String firstName;
