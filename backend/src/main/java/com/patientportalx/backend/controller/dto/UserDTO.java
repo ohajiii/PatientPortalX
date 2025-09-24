@@ -1,6 +1,6 @@
-package com.patientportalx.backend.dto;
+package com.patientportalx.backend.controller.dto;
 
-import com.patientportalx.backend.entity.enums.Role;
+import com.patientportalx.backend.domain.enums.Role;
 import lombok.*;
 
 @Getter

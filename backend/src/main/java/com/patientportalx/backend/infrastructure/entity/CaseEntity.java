@@ -1,6 +1,6 @@
-package com.patientportalx.backend.entity;
+package com.patientportalx.backend.infrastructure.entity;
 
-import com.patientportalx.backend.entity.enums.CaseStatus;
+import com.patientportalx.backend.domain.enums.CaseStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class CaseEntity {
 
     @Id
@@ -21,11 +22,11 @@ public class CaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
-    private User patient;
+    private UserEntity patient;
 
     @ManyToOne
     @JoinColumn(name = "staff_id")
-    private User staff;
+    private UserEntity staff;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
@@ -38,10 +39,10 @@ public class CaseEntity {
     private LocalDateTime updatedAt;
 
     @OneToOne(mappedBy = "caseEntity", cascade = CascadeType.ALL)
-    private IntakeForm intakeForm;
+    private IntakeFormEntity intakeForm;
 
     @OneToMany(mappedBy = "caseEntity")
-    private List<Report> reports;
+    private List<ReportEntity> reports;
 
     @PrePersist
     protected void onCreate() {

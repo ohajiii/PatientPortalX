@@ -1,6 +1,6 @@
-package com.patientportalx.backend.entity;
+package com.patientportalx.backend.infrastructure.entity;
 
-import com.patientportalx.backend.entity.enums.Role;
+import com.patientportalx.backend.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +13,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@Builder
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +33,7 @@ public class User {
     private String username;
 
     @Column(name = "password_hash", nullable = false)
-    private String password;
+    private String passwordHash;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
@@ -48,10 +49,10 @@ public class User {
     private List<CaseEntity> staffCases;
 
     @OneToMany(mappedBy = "patient")
-    private List<Notification> patientNotifications;
+    private List<NotificationEntity> patientNotifications;
 
     @OneToMany(mappedBy = "staff")
-    private List<Notification> staffNotifications;
+    private List<NotificationEntity> staffNotifications;
 
     @PrePersist
     protected void onCreate() {

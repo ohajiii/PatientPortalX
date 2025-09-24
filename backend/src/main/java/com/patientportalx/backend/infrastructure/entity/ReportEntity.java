@@ -1,4 +1,4 @@
-package com.patientportalx.backend.entity;
+package com.patientportalx.backend.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Report {
+@Builder
+public class ReportEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

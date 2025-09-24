@@ -1,4 +1,7 @@
 package com.patientportalx.backend.service;
 
-public class UserService {
+import com.patientportalx.backend.domain.model.User;
+
+public interface UserService {
+    void register(User user);
 }
