@@ -1,12 +1,12 @@
 package com.patientportalx.backend.infrastructure.repository;
 
-import com.patientportalx.backend.infrastructure.entity.Notification;
-import com.patientportalx.backend.infrastructure.entity.User;
+import com.patientportalx.backend.infrastructure.entity.NotificationEntity;
+import com.patientportalx.backend.infrastructure.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface NotificationRepository extends JpaRepository<Notification, Long> {
-    List<Notification> findByPatient(User patient);
-    List<Notification> findByStaff(User staff);
+public interface NotificationRepository extends JpaRepository<NotificationEntity, Long> {
+    List<NotificationEntity> findByPatient(UserEntity patient);
+    List<NotificationEntity> findByStaff(UserEntity staff);
 }
