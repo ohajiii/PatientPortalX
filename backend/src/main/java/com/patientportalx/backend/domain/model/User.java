@@ -3,7 +3,7 @@ package com.patientportalx.backend.domain.model;
 import com.patientportalx.backend.domain.enums.Role;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Builder
@@ -15,9 +15,9 @@ public class User {
     private String username;
     private String passwordHash;
     private Role role;
-    private final LocalDate createdAt;
+    private final LocalDateTime createdAt;
 
-    public User(Long id, String  firstName, String lastName, String email, String username, String passwordHash, Role role, LocalDate createdAt) {
+    public User(Long id, String  firstName, String lastName, String email, String username, String passwordHash, Role role, LocalDateTime createdAt) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
