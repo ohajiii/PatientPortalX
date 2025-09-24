@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,10 +48,10 @@ public class User {
     private List<CaseEntity> staffCases;
 
     @OneToMany(mappedBy = "patient")
-    private List<Notification> patientNotifications;
+    private List<NotificationEntity> patientNotifications;
 
     @OneToMany(mappedBy = "staff")
-    private List<Notification> staffNotifications;
+    private List<NotificationEntity> staffNotifications;
 
     @PrePersist
     protected void onCreate() {

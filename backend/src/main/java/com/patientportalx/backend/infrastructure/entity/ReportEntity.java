@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Report {
+public class ReportEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

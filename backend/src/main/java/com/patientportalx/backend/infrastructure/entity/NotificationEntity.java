@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Notification {
+public class NotificationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +19,11 @@ public class Notification {
 
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
-    private User patient;
+    private UserEntity patient;
 
     @ManyToOne
     @JoinColumn(name = "staff_id", nullable = false)
-    private User staff;
+    private UserEntity staff;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String message;
