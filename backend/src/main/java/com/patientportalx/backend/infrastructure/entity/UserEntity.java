@@ -42,18 +42,6 @@ public class UserEntity {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "patient")
-    private List<CaseEntity> patientCases;
-
-    @OneToMany(mappedBy = "staff")
-    private List<CaseEntity> staffCases;
-
-    @OneToMany(mappedBy = "patient")
-    private List<NotificationEntity> patientNotifications;
-
-    @OneToMany(mappedBy = "staff")
-    private List<NotificationEntity> staffNotifications;
-
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
