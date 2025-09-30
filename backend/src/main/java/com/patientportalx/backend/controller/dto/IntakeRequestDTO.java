@@ -24,4 +24,5 @@ public class IntakeRequestDTO {
     private String symptomStart;
     private Integer symptomSeverity;
     private String additionalNotes;
+    private String createdAt;
 }
