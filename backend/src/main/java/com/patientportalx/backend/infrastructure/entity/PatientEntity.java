@@ -1,5 +1,6 @@
 package com.patientportalx.backend.infrastructure.entity;
 
+import com.patientportalx.backend.domain.enums.BloodType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,8 +24,9 @@ public class PatientEntity {
     @Column(length = 10)
     private String gender;
 
-    @Column(name ="blood_type", length = 3)
-    private String bloodType;
+    @Enumerated(EnumType.STRING)
+    @Column(name ="blood_type", nullable = false, length = 15)
+    private BloodType bloodType;
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
