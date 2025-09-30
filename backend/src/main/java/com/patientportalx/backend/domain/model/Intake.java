@@ -3,6 +3,9 @@ package com.patientportalx.backend.domain.model;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Builder
 public class Intake {
@@ -32,6 +35,7 @@ public class Intake {
     private String symptomStart;
     private Integer symptomSeverity;
     private String additionalNotes;
+    private LocalDateTime createdAt;
 
     public Intake(Long id,
                   Boolean hasChronicIllness, String chronicIllnessDetails, Boolean takesMedication, String medicationDetails,
