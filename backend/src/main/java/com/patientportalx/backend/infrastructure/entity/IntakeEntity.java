@@ -77,6 +77,6 @@ public class IntakeEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false, unique = true)
+    @JoinColumn(name = "patient_id", nullable = false)
     private PatientEntity patient;
 }
