@@ -29,6 +29,7 @@ public class PatientEntity {
     private BloodType bloodType;
 
     @OneToOne
-    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    @JoinColumn(name = "user_id", unique = true)
     private UserEntity user;
+
 }
