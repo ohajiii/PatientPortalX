@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 public class IntakeResponseDTO {
     private Long id;
+    private Long patientId;
     private Boolean hasChronicIllness;
     private String chronicIllnessDetails;
     private Boolean takesMedication;
