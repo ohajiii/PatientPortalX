@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Builder
 public class Intake {
     private final Long id;
+    private final Long patientId;
 
     private Boolean hasChronicIllness;
     private String chronicIllnessDetails;
@@ -37,13 +38,16 @@ public class Intake {
     private String additionalNotes;
     private LocalDateTime createdAt;
 
-    public Intake(Long id,
+    public Intake(Long id, Long patientId,
                   Boolean hasChronicIllness, String chronicIllnessDetails, Boolean takesMedication, String medicationDetails,
                   Boolean hasAllergies, String allergyDetails, Boolean hasSurgeries, String surgeryDetails,
                   Boolean smokes, Boolean drinksAlcohol, String alcoholFrequency,
                   Boolean exercisesRegularly, String exerciseFrequency, String primaryComplaint, String symptomStart,
-                  Integer symptomSeverity, String additionalNotes){
+                  Integer symptomSeverity, String additionalNotes,LocalDateTime createdAt) {
+
         this.id = id;
+        this.patientId = patientId;
+
         this.hasChronicIllness = hasChronicIllness != null ? hasChronicIllness : false;
         this.chronicIllnessDetails = chronicIllnessDetails;
 
@@ -69,6 +73,7 @@ public class Intake {
         updateSymptomSeverity(symptomSeverity);
 
         this.additionalNotes = additionalNotes;
+        this.createdAt = createdAt;
     }
 
     public void updateComplaint(String complaint) {
