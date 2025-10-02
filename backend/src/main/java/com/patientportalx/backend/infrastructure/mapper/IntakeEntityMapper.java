@@ -1,13 +1,16 @@
 package com.patientportalx.backend.infrastructure.mapper;
 
 import com.patientportalx.backend.domain.model.Intake;
+import com.patientportalx.backend.domain.model.Patient;
 import com.patientportalx.backend.infrastructure.entity.IntakeEntity;
+import com.patientportalx.backend.infrastructure.entity.PatientEntity;
 
 public class IntakeEntityMapper {
 
     public static IntakeEntity toEntity(Intake intake) {
         return IntakeEntity.builder()
                 .id(intake.getId())
+                .patient(intake.getPatientId() != null ? PatientEntity.builder().id(intake.getPatientId()).build() : null)
                 .hasChronicIllness(intake.getHasChronicIllness())
                 .chronicIllnessDetails(intake.getChronicIllnessDetails())
                 .takesMedication(intake.getTakesMedication())
@@ -32,6 +35,7 @@ public class IntakeEntityMapper {
     public static Intake toDomain(IntakeEntity entity) {
         return Intake.builder()
                 .id(entity.getId())
+                .patientId(entity.getPatient() != null ? entity.getPatient().getId() : null)
                 .hasChronicIllness(entity.getHasChronicIllness())
                 .chronicIllnessDetails(entity.getChronicIllnessDetails())
                 .takesMedication(entity.getTakesMedication())
