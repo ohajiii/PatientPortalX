@@ -9,6 +9,7 @@ public class IntakeControllerMapper {
     public static Intake toDomain(IntakeRequestDTO dto) {
         return Intake.builder()
                 .id(null)
+                .patientId(dto.getPatientId())
                 .hasChronicIllness(dto.getHasChronicIllness())
                 .chronicIllnessDetails(dto.getChronicIllnessDetails())
                 .takesMedication(dto.getTakesMedication())
@@ -33,6 +34,7 @@ public class IntakeControllerMapper {
     public static IntakeResponseDTO toDto(Intake intake) {
         return new IntakeResponseDTO(
                 intake.getId(),
+                intake.getPatientId(),
                 intake.getHasChronicIllness(),
                 intake.getChronicIllnessDetails(),
                 intake.getTakesMedication(),
